@@ -1,0 +1,67 @@
+digraph example{
+rankdir = BT;
+node [
+	shape="record"
+]
+-1714442847 [color = black, label = "{\<\<Hello World\>\>\lexample.DesignParser|- Properties : props\l|+ void main( ) \l+ List recursiveAdd( ) \l+ Properties getProperties( ) \l}"];
+1372774676 [color = black, label = "{\<\<Hello World\>\>\lexample.ExtendsArrow|- String : extendsFormatting\l|+ String convert( ) \l+ boolean equals( ) \l}"];
+82922085 [color = black, label = "{\<\<Hello World\>\>\lexample.Arrow|+ String : pointsFrom\l+ String : pointsTo\l+ Map : attributes\l+ boolean : isOneToMany\l+ String : arrowType\l|+ String convert( ) \l+ Map getAttributes( ) \l+ String generateAttributeTags( ) \l+ boolean equals( ) \l+ int hashCode( ) \l+ String getArrowType( ) \l}"];
+-1956840258 [color = black, label = "{\<\<Hello World\>\>\lexample.GraphVizBuilder|- List : classes\l- Map : hashToJClass\l- Map : dummyClassesToRender\l- Set : arrows\l- List : primitiveTypes\l|+ List getClasses( ) \l+ Set getArrows( ) \l+ void run( ) \l+ void addExtendArrow( ) \l+ void addImplementsArrows( ) \l+ boolean isPrimitiveType( ) \l+ void addAssociationArrows( ) \l+ void addDependencyArrows( ) \l- void createAndAddADArrowsFromType( ) \l- Arrow createADArrow( ) \l- String getPrettyName( ) \l- Class getClassFromFullyQualifiedName( ) \l}"];
+-1510317998 [color = black, label = "{\<\<Hello World\>\>\lexample.JClass|- ClassNode : node\l- List : fields\l- List : methods\l- List : interfaces\l- String : superclass\l- Map : attributes\l- Map : primitiveTypeIDs\l- List : jClassArchetypeTags\l- String : graphVizNewLine\l- String : actualNewLine\l|+ Map getAttributes( ) \l+ boolean hasSuper( ) \l+ boolean hasInterfaces( ) \l+ boolean hasAssociations( ) \l+ boolean hasDependencies( ) \l+ String buildDummyClassString( ) \l+ String buildString( ) \l+ String buildMethods( ) \l- String buildMethodArguments( ) \l- String buildMethodAccessModifier( ) \l+ String buildFields( ) \l- String buildFieldAccessModifier( ) \l+ String getName( ) \l+ String getHashName( ) \l+ String getSuperName( ) \l+ List getInterfaces( ) \l+ List getMethods( ) \l+ List getFields( ) \l+ String getClassNodeFQName( ) \l+ String[] getFieldNodeTypeFQNames( ) \l+ String[] getMethodReturnTypeFQNames( ) \l+ String[] getMethodArgumentTypeFQNames( ) \l- String[] FQNameHelper( ) \l+ void setAttribute( ) \l+ void addArchetypeClassTag( ) \l}"];
+-1248630062 [color = black, label = "{\<\<Hello World\>\>\l\<\<interface\>\>\lexample.PatternDetector||+ void analyze( ) \l}"];
+-1994136243 [color = black, label = "{\<\<Hello World\>\>\lexample.SingletonDetector|- String : color\l|+ void analyze( ) \l}"];
+1249650732 [color = black, label = "{\<\<Hello World\>\>\lexample.AssociationArrow|- String : assocFormatting\l|+ String convert( ) \l+ void setOneToMany( ) \l}"];
+1170638132 [color = black, label = "{\<\<Hello World\>\>\lexample.DetectorFramework|- List : detectors\l- DetectorFramework : instance\l|+ void addDetector( ) \l+ List getDetectors( ) \l+ DetectorFramework getInstance( ) \l}"];
+-1935747088 [color = black, label = "{\<\<Hello World\>\>\lexample.FCOIViolationDetector|- String : color\l|+ void analyze( ) \l}"];
+72224149 [color = black, label = "{\<\<Hello World\>\>\lexample.ImplementsArrow|- String : implementsFormatting\l|+ String convert( ) \l+ boolean equals( ) \l}"];
+715365082 [color = black, label = "{\<\<Hello World\>\>\lexample.DependencyArrow|- String : dependencyFormatting\l|+ String convert( ) \l+ void setOneToMany( ) \l}"];
+597365408 [label = "{org.objectweb.asm.tree.ClassNode}"];
+1063877011 [label = "{java.lang.Object}"];
+921450557 [label = "{org.objectweb.asm.tree.MethodNode}"];
+1872263458 [label = "{org.objectweb.asm.tree.FieldNode}"];
+1195259493 [label = "{java.lang.String}"];
+126936819 [label = "{java.util.Properties}"];
+-530663260 [label = "{java.lang.Class}"];
+-1956840258->597365408[color=black, style="dashed", arrowhead="open"];
+-1935747088->1195259493[color="black", arrowhead="open"];
+715365082->1195259493[color="black", arrowhead="open"];
+-1935747088->1063877011[color=black, arrowhead="onormal"];
+-1956840258->82922085[headlabel="1..*", color="black", arrowhead="open"];
+82922085->1063877011[color=black, arrowhead="onormal"];
+1170638132->-1248630062[headlabel="1..*", color="black", arrowhead="open"];
+1249650732->82922085[color=black, arrowhead="onormal"];
+-1510317998->1872263458[headlabel="1..*", color="black", arrowhead="open"];
+-1994136243->1195259493[color="black", arrowhead="open"];
+1372774676->82922085[color=black, arrowhead="onormal"];
+-1956840258->-530663260[color=black, style="dashed", arrowhead="open"];
+-1935747088->82922085[color=black, style="dashed", arrowhead="open"];
+-1994136243->1063877011[color=black, arrowhead="onormal"];
+1170638132->1170638132[color="black", arrowhead="open"];
+82922085->1195259493[color="black", arrowhead="open"];
+-1248630062->82922085[color=black, style="dashed", arrowhead="open"];
+-1714442847->1195259493[color=black, style="dashed", arrowhead="open"];
+72224149->82922085[color=black, arrowhead="onormal"];
+-1994136243->82922085[color=black, style="dashed", arrowhead="open"];
+1170638132->1063877011[color=black, arrowhead="onormal"];
+-1510317998->1063877011[color=black, arrowhead="onormal"];
+-1714442847->126936819[color="black", arrowhead="open"];
+-1935747088->-1510317998[color=black, style="dashed", arrowhead="open"];
+-1956840258->1063877011[color=black, arrowhead="onormal"];
+-1510317998->1195259493[headlabel="1..*", color="black", arrowhead="open"];
+-1510317998->921450557[headlabel="1..*", color="black", arrowhead="open"];
+-1956840258->1195259493[headlabel="1..*", color="black", arrowhead="open"];
+1372774676->1063877011[color=black, style="dashed", arrowhead="open"];
+1372774676->1195259493[color="black", arrowhead="open"];
+-1994136243->-1248630062[color=black, style="dashed", arrowhead="onormal"];
+-1248630062->-1510317998[color=black, style="dashed", arrowhead="open"];
+1249650732->1195259493[color="black", arrowhead="open"];
+-1714442847->1063877011[color=black, arrowhead="onormal"];
+-1994136243->-1510317998[color=black, style="dashed", arrowhead="open"];
+72224149->1195259493[color="black", arrowhead="open"];
+715365082->82922085[color=black, arrowhead="onormal"];
+72224149->1063877011[color=black, style="dashed", arrowhead="open"];
+-1956840258->-1510317998[headlabel="1..*", color="black", arrowhead="open"];
+-1510317998->597365408[color="black", arrowhead="open"];
+-1248630062->1063877011[color=black, arrowhead="onormal"];
+-1935747088->-1248630062[color=black, style="dashed", arrowhead="onormal"];
+}

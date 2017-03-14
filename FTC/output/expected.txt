@@ -1,0 +1,11 @@
+digraph example{
+rankdir = BT;
+node [
+	shape="record"
+]
+Transformer [label = "{Transformer|+ java.lang.String transform( ) \l}"];
+AllCapsTransformer [label = "{AllCapsTransformer|+ java.lang.String transform( ) \l}"];
+SubstitutionTransformer [label = "{SubstitutionTransformer|# pattern\l# replacement\l|+ java.lang.String getPattern( ) \l+ void setPattern( ) \l+ java.lang.String getReplacement( ) \l+ void setReplacement( ) \l+ java.lang.String transform( ) \l}"];
+SubstitutionTransformer->Transformer[arrowhead="onormal", style="dashed"];
+AllCapsTransformer->Transformer[arrowhead="onormal", style="dashed"];
+}

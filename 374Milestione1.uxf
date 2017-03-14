@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>20</y>
+      <w>500</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>DesignParser
+-
++ static void main(args : String[] ) </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>130</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>ClassReader</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>360</y>
+      <w>270</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Arrow
+-
++ void add (classNode : ClassNode)
++ String convert()
+
++ void remove(String className)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>610</y>
+      <w>260</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>ExtendsArrow
+-
+- Map &lt;String, String&gt; hm
+-
++ void add (classNode : ClassNode)
++ String convert()
++ void remove(String className)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>430</y>
+      <w>280</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>260.0;10.0;260.0;90.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>500</y>
+      <w>260</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>ImplementsArrow
+-
+- Map &lt;String, List&lt;String&gt;&gt; hm
+-
++ void add (classNode : ClassNode)
++ String convert()
++ void remove(String className)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>190</y>
+      <w>220</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>GraphVizBuilder
+--
+- List&lt;Arrow&gt; arrows;
+- ClassStringBuilder classes
+--
++ void generate()
++ void addArrow(Arrow arrow)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>360</y>
+      <w>410</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>ClassStringBuilder
+--
+- List&lt;ClassNode&gt; classNodes
+- String NEWLINE;
+--
++ String buildString()
++ String buildMethods(c : ClassNode)
++ String buildFields(c : ClassNode)
+- String buildMethodAccessModifier(MethodNode method)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>280</y>
+      <w>110</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>90.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>280</y>
+      <w>130</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>70</y>
+      <w>70</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>50.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>70</y>
+      <w>40</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;60.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>610</y>
+      <w>290</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>AssociationArrow
+-
+- Map &lt;String, Map&lt;String, int&gt;&gt; hm
+-
++ void add (classNode : ClassNode)
++ String convert()
++ void remove(String className)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>610</y>
+      <w>280</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>DependencyArrow
+-
+- Map &lt;String, Map&lt;String, int&gt;&gt; hm
+-
++ void add (classNode : ClassNode)
++ String convert()
++ void remove(String className)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>510</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>510</y>
+      <w>160</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0;140.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>510</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>480</y>
+      <w>260</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>PriorityCheckerArrow
+-
+- List&lt;Arrow&gt; arrows
+-
++ void add (classNode : ClassNode)
++ String convert()
++ void remove(String className)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>510</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+</diagram>

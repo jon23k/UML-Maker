@@ -1,0 +1,12 @@
+# To store multiple values, separate by COMMA without whitespace
+#Sun Jan 22 16:23:50 EST 2017
+
+blacklist=java
+whitelist=example.Arrow,example.AssociationArrow,example.DependencyArrow,example.DesignParser,example.DetectorFramework,example.ExtendsArrow,example.FCOIViolationDetector,example.GraphVizBuilder,example.ImplementsArrow,example.JClass,example.PatternDetector,example.SingletonDetector
+recursive=true
+showSynthetic=false
+SingletonDetectorColor=blue
+FCOIDetectorColor=orange
+AdapterDetectorColor=red
+DIPViolationDetectorColor=purple
+detectors=example.FCOIViolationDetector,example.SingletonDetector,example.DIPViolationDetector

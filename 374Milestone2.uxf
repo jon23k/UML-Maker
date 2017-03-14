@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>70</y>
+      <w>500</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>DesignParser
+-
++ static void main(args : String[] ) 
++ recursiveAdd(List&lt;String&gt; classNames) List&lt;String&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>80</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>ClassReader</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>370</y>
+      <w>270</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+Arrow
+-
+String pointsFrom
+String pointsTo
+String color
+-
++ abstract convert() : String
++ setColor(color : String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>550</y>
+      <w>340</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ExtendsArrow
+-
+- final String EXTENDS_ARROW_FORMATTING
+-
++ convert() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>550</y>
+      <w>340</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ImplementsArrow
+-
+- final String IMPLEMENTS_ARROW_FORMATTING
+-
++ convert() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>200</y>
+      <w>220</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>GraphVizBuilder
+--
+- List&lt;ClassNode&gt; classNodes
+- List&lt;JClass&gt; classes
+- List&lt;Arrow&gt; arrows
+--
++ run()
++ addArrow(arrow : Arrow)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>310</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>370</x>
+      <y>120</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>90</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>650</y>
+      <w>340</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>AssociationArrow
+-
+- boolean hasMultipleAssociations
+- final String ASSOC_ARROW_FORMATTING
+-
++ convert() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>650</y>
+      <w>340</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>DependencyArrow
+-
+- final String DEPENDS_ARROW_FORMATTING
+-
++ convert() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>140</y>
+      <w>560</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>JClass
+-
+- ClassNode node
+- List&lt;FieldNode&gt; fields
+- List&lt;MethodNode&gt; methods
+- List&lt;String&gt; interfaces
+- String superclass
+- String color
+- final String graphVizNewLine
+- final String actualNewLine
+-
++ hasSuper() : boolean
++ hasInterfaces() : boolean
++ hasAssociations() : boolean
++ hasDependencies() : boolean
++ setColor(color : String)
++ setTemporaryName(tempName : String)
++ buildString() : String
++ buildMethods() : String
+- buildMethodArguments(method : MethodNode, parameterTypes : List&lt;String&gt;) : String
+- buildMethodAccessModifier(MethodNode method) : String
++ buildFields(classNode : ClassNode) : String
+- buildFieldAccessModifier(field : FieldNode) : String
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>490</y>
+      <w>60</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>40.0;10.0;40.0;100.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>580</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>580</y>
+      <w>60</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>40.0;10.0;40.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>680</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>240</y>
+      <w>230</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>240</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>ClassNode</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>250</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+</diagram>

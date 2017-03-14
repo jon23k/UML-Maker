@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>0</y>
+      <w>400</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>DesignParser
+-
++ static void main(args : String[] ) 
++ recursiveAdd(List&lt;String&gt; classNames) List&lt;String&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>472</x>
+      <y>8</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>ClassReader</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>240</y>
+      <w>216</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+Arrow
+-
+String pointsFrom
+String pointsTo
+String color
+-
++ abstract convert() : String
++ setColor(color : String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>608</y>
+      <w>272</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>ExtendsArrow
+-
+-String extendFormatting
+-boolean isOneToMany
+-
++ convert() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>384</y>
+      <w>272</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>ImplementsArrow
+-
+-String implementsFormatting
+-
++ convert() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>248</x>
+      <y>112</y>
+      <w>208</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>GraphVizBuilder
+--
+- List&lt;ClassNode&gt; classNodes
+- List&lt;JClass&gt; classes
+- List&lt;Arrow&gt; arrows
+--
++ run()
++ addArrow(arrow : Arrow)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>184</y>
+      <w>80</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80.0;70.0;80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>40</y>
+      <w>24</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>408</x>
+      <y>16</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>456</y>
+      <w>272</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>AssociationArrow
+-
+-String assocFormatting
+-boolean isOneToMany
+-
++ convert() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>536</y>
+      <w>272</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>DependencyArrow
+-
+- String dependencyFormatting
+-
++ convert() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>64</y>
+      <w>448</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>JClass
+-
+- ClassNode node
+- List&lt;FieldNode&gt; fields
+- List&lt;MethodNode&gt; methods
+- List&lt;String&gt; interfaces
+- String superclass
+- String color
+- final String graphVizNewLine
+- final String actualNewLine
+-
++ hasSuper() : boolean
++ hasInterfaces() : boolean
++ hasAssociations() : boolean
++ hasDependencies() : boolean
++ setColor(color : String)
++ setTemporaryName(tempName : String)
++ buildString() : String
++ buildMethods() : String
+- buildMethodArguments(method : MethodNode, parameterTypes : List&lt;String&gt;) : String
+- buildMethodAccessModifier(MethodNode method) : String
++ buildFields(classNode : ClassNode) : String
+- buildFieldAccessModifier(field : FieldNode) : String
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>144</y>
+      <w>128</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>56</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>ClassNode</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>416</x>
+      <y>72</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>248</y>
+      <w>288</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+PatternDetector
+-
++analyze(List&lt;JClass&gt; classes, List&lt;Arrow&gt; arrow)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>128</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>336</y>
+      <w>288</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>SingletonDetector
+-
++analyze(List&lt;JClass&gt; classes, List&lt;Arrow&gt; arrow)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>368</x>
+      <y>336</y>
+      <w>96</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;100.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>368</x>
+      <y>408</y>
+      <w>96</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0;100.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>368</x>
+      <y>480</y>
+      <w>96</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0;100.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>368</x>
+      <y>544</y>
+      <w>96</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0;100.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>408</y>
+      <w>288</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>FCOIViolationDetector
+-
++analyze(List&lt;JClass&gt; classes, List&lt;Arrow&gt; arrow)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>296</y>
+      <w>56</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;40.0;50.0;170.0;30.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>296</x>
+      <y>352</y>
+      <w>40</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>24</x>
+      <y>120</y>
+      <w>200</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;singleton&gt;&gt;
+DetectorFramework
+-
+- List&lt;PatternDetectors&gt; detectors
+- DetectorFramework instance
+-
+- DetectorFramework()
++void addDetector(Detector d) 
++DetectorFramework getInstance()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>216</y>
+      <w>24</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>40</y>
+      <w>24</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
